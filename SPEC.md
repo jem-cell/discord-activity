@@ -52,8 +52,10 @@ Three types, in rotation: **arithmetic**, **algebra**, **sequences**. Question t
 ## Testing
 
 - **Vitest** unit tests on the **puzzle engine + backend logic**: generation, calibration, answer-checking, scoring/streak, daily-puzzle seed determinism, leaderboard queries, BST reset.
+- **End-to-end demo**: `npm run demo` exercises the full backend flow (puzzle → guess → once-a-day → leaderboard) with a fixed clock and in-memory DB.
+- **Live server**: `npm run dev:server` + curl against the API.
 - The React UI is thin (display + input) and is tested by running it, not unit-tested.
-- **Live test**: a dev-only Discord application + a `cloudflared` tunnel (`cloudflared tunnel --url http://localhost:3000`), launched from the Activity Shelf (Rocket button) in a voice channel with Developer Mode enabled.
+- **Live Discord testing is not required** — no dev-only Discord app / `cloudflared` tunnel needed.
 
 ## Out of scope (v1)
 
