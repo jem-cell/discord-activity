@@ -1,12 +1,13 @@
 # Issue tracker
 
-**Local markdown.** Issues live as files under `.scratch/<feature>/` in this repo.
+**GitHub Issues** on `jem-cell/discord-activity` (https://github.com/jem-cell/discord-activity/issues).
 
 ## Wayfinding operations
 
-- **Create an issue**: write a markdown file under `.scratch/<feature>/`. The filename is the issue's identity (slug). The file's first line is its title (a `# ` heading); the body follows.
-- **Labels**: a `wayfinder:map` label is expressed as a `labels:` line in the file frontmatter; `wayfinder:<type>` similarly.
-- **Child-of / blocking**: expressed as `parent:` and `blocks:`/`blocked-by:` lines in frontmatter, referencing other issue filenames.
-- **Open vs closed**: a closed issue is moved to `.scratch/<feature>/closed/` (or its filename prefixed `closed-`). An open, unassigned ticket is unclaimed.
-- **Assignment**: an `assignee:` line in frontmatter.
-- **Frontier query**: open, unblocked, unassigned children of the map.
+- **Create an issue**: `gh issue create --repo jem-cell/discord-activity ...`
+- **Labels**: `wayfinder:map`, `wayfinder:research`, `wayfinder:prototype`, `wayfinder:grilling`, `wayfinder:task` (created).
+- **Child-of / blocking**: GitHub Issues has no native dependency relationship, so blocking uses a **body convention** — a `**Blocked by:** #<id> (<name>)` line in the ticket body. A ticket is unblocked when every issue it names is closed.
+- **Open vs closed**: `gh issue close`. An open, unassigned ticket is unclaimed.
+- **Assignment**: `gh issue edit <n> --add-assignee jem-cell`.
+- **Frontier query**: open, unblocked, unassigned children of the map (issues with a `wayfinder:*` label other than `wayfinder:map`).
+- **Resolution**: post a resolution comment, close the issue, append a context pointer to the map's Decisions-so-far.

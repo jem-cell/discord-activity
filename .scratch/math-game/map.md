@@ -17,6 +17,14 @@ A spec for a **Discord Activity** (Embedded App SDK) math game, ready to hand of
 
 <!-- one line per closed ticket -->
 
+## Live tickets
+
+- [Research: Embedded App SDK mechanics](https://github.com/jem-cell/discord-activity/issues/3) — unblocked
+- [Grilling: Puzzle types & difficulty ramp](https://github.com/jem-cell/discord-activity/issues/4) — unblocked
+- [Grilling: Game mechanics & scoring](https://github.com/jem-cell/discord-activity/issues/5) — blocked by #4
+- [Grilling: Backend & data architecture](https://github.com/jem-cell/discord-activity/issues/6) — blocked by #3
+- [Grilling: Testing strategy](https://github.com/jem-cell/discord-activity/issues/7) — blocked by #5
+
 ## Not yet specified
 
 - Puzzle generation & answer-checking engine (how each puzzle type is generated and validated) — hangs on puzzle types + difficulty ramp.
